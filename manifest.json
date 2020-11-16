@@ -1,0 +1,18 @@
+{
+    "name": "Football App",
+    "short_name": "Football",
+    "description": "Aplikasi untuk informasi bola pada champions league",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#14274E",
+    "theme_color": "#14274E",
+    "gcm_sender_id": "29963220866",
+    "icons": [
+                {
+            "src": "icon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose" : "any maskable"
+        }
+    ]
+}

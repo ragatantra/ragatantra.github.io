@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Champions League</title>
+  <meta name="description" content="My first PWA" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/src/css/materialize.min.css" />
+  <link rel="stylesheet" href="/src/css/style.css">
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="preconnect" href="https://crests.football-data.org">
+  <link rel="preconnect" href="https://api.football-data.org">
+  <link rel="apple-touch-icon" href="/icon.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="theme-color" content="#14274E" />
+</head>
+
+<body>
+  <!-- Navigasi -->
+  <nav class="indigo darken-4 z-depth-0" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#home" class="brand-logo hide-on-med-and-down p" id="logo-container"><img
+          src="/src/assets/image/Logo.png" width="30px" height="30px" alt="Champions League"></a>
+      <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+
+      <ul class="topnav right hide-on-med-and-down white-text"></ul>
+      <ul class=" sidenav black-text" id="nav-mobile"></ul>
+    </div>
+  </nav>
+  <!-- Akhir Navigasi -->
+
+  <!-- Konten -->
+  <div class="container mt mb">
+    <img class="round" src="/src/assets/image/main.jpg" width="100%" alt="champions league image">
+
+    <!-- Preloader -->
+    <div class="container mt mb">
+      <div class="row mt mb">
+        <div class="col s12 center">
+          <div id="preloader" class="preloader-wrapper center big active">
+            <div class="spinner-layer spinner-blue-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Akhir Preloader -->
+
+    <div class="container" id="body-content"></div>
+  </div>
+  <!-- Akhir Konten -->
+
+  <!-- Footer -->
+  <footer class="page-footer indigo lighten-5">
+    <div class="container mt mb">
+      <div class="profile">
+        <div class="col 16 s3 mr">
+          <img src="/src/assets/image/Champions.png" width="200px" height="200px" alt="Champions League Logo">
+        </div>
+        <div class="col l6 s3 ml">
+          <h5 class="black-text">Champions League</h5>
+          <p class="black-text text-lighten-4">This web is my second submission in <strong><a class="black-text"
+                href="https://www.dicoding.com/academies/74">MPWA Dicoding</a></strong> 2020. Contains Data from
+            <strong><a class="black-text" href="https://www.football-data.org/">Football-Data</a></strong> and Design
+            using <strong><a class="black-text" href="https://materializecss.com/">Materialize</a></strong>.
+          </p>
+          <a class="waves-effect waves-light btn indigo darken-4 mt">Subscribe</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright indigo darken-4 col row">
+      <div class="container s12 center">
+        © Submission Raga Powered by<a class="grey-text text-lighten-4" href=""> Materialize</a>. All rights
+        reserved.
+      </div>
+    </div>
+  </footer>
+  <!-- Akhir Footer -->
+
+  <script src="/src/js/materialize.min.js"></script>
+  <script src="/src/js/nav.js"></script>
+  <script src="/src/js/api.js"></script>
+  <script src="/src/js/idb.js"></script>
+  <script src="/src/js/db.js"></script>
+  <script src="/sw-register.js"></script>
+
+
+  <script>
+    // REQUEST API UNTUK PERTAMA KALI
+    document.addEventListener("DOMContentLoaded", () => {
+      getMatches();
+    });
+  </script>
+</body>
+
+</html>
