@@ -502,7 +502,7 @@ function getStandings() {
               standingsHTML += `
               <div class="card" >
                 <div class="card-content">
-                span class="card-title">${standings.group}</span>
+                <span class="card-title">${standings.group}</span>
                 <table class="striped responsive-table">
                     <thead>
                         <tr>
