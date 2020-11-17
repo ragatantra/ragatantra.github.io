@@ -108,8 +108,7 @@ workbox.precaching.precacheAndRoute([{
   {
     url: "https://fonts.googleapis.com/icon?family=Material+Icons",
     revision: '1'
-  },
-  {ignoreURLParametersMatching: [/.*/]}
+  }
 ]);
 
 workbox.routing.registerRoute(
