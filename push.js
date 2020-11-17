@@ -12,10 +12,10 @@ webPush.setVapidDetails(
     vapidKeys.privateKey
 )
 var pushSubscription = {
-    "endpoint": "https://fcm.googleapis.com/fcm/send/dQFALIeyGBE:APA91bFoa6G4yB63Sv5AbioXDMMYnvSPX8xv0sZx9tVaktzdENJprODtFLIVZl5nScD-lMOFaa366ssSh3L2wiPyZNzjGHElANWGxSzPMoWo8nYvRgTOpG0_HW1uZgWH_QIYGZxsuAT4",
+    "endpoint": "https://fcm.googleapis.com/fcm/send/dmkgnrKK9QM:APA91bFEq1HWJ9Uw32nbE5Rs9yB0GzMjFvjsXVfP5RcYzKzBqg693e0zjP9FoTaD4sny1xRg9PW0scpwXQNuvD7tCCWqKsofTABrUS9LioXQDtZh1Adz2Z-g_1dQA2NXUNKHk-cngp42",
     "keys": {
-        "p256dh": "BPyIn3fhDFt4Vaam3xpSuNW4ar6FC/qg3zDaiPY3HnF6uOgiAVm0ZarqwKrT1e8e34bnf1iURyp1mNQ1tl2nOwI=",
-        "auth": "5hVa+lb00OJmNqAML73/Kw=="
+        "p256dh": "BD+aSOVT4cB/Du+JOLHdhSlCfuaGYZXxvapuFNCTEhIbL8b06As5ElS5qD9/qL8L1rRvXthncPthUgfxWrxViG0=",
+        "auth": "sm4K7f8GRExJYgl6RHlGkg=="
     }
 };
 var payload = 'Welcome in Football application Champions League';
