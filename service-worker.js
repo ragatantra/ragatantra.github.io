@@ -104,7 +104,10 @@ workbox.precaching.precacheAndRoute([{
     url: "/sw-register.js",
     revision: '1'
   },
-  { url: "/service-worker.js", revision: '1'},
+  {
+    url: "/service-worker.js",
+    revision: '1'
+  },
   {
     url: "https://fonts.googleapis.com/icon?family=Material+Icons",
     revision: '1'
@@ -112,17 +115,16 @@ workbox.precaching.precacheAndRoute([{
 ]);
 
 workbox.routing.registerRoute(
-    new RegExp('^/src/assets/'),
-    /\.(?:png|gif|jpg|jpeg|svg)$/,
-    workbox.strategies.cacheFirst({
-        cacheName: 'images',
-        plugins: [
-            new workbox.expiration.Plugin({
-                maxEntries: 30,
-                maxAgeSeconds: 30 * 24 * 60 * 60,
-            }),
-        ],
-    }),
+  /\/(src)\/(assets)\/.*.(?:png|gif|jpg|jpeg|svg)$/,
+  workbox.strategies.cacheFirst({
+    cacheName: 'images',
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 30,
+        maxAgeSeconds: 30 * 24 * 60 * 60,
+      }),
+    ],
+  }),
 );
 
 workbox.routing.registerRoute(
