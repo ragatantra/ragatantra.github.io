@@ -101,6 +101,10 @@ workbox.precaching.precacheAndRoute([{
     revision: '1'
   },
   {
+    url: "/icon192.png",
+    revision: '1'
+  },
+  {
     url: "/sw-register.js",
     revision: '1'
   },
@@ -112,7 +116,9 @@ workbox.precaching.precacheAndRoute([{
     url: "https://fonts.googleapis.com/icon?family=Material+Icons",
     revision: '1'
   }
-]);
+], {
+  ignoreUrlParametersMatching: [/.*/]
+});
 
 workbox.routing.registerRoute(
   /\/(src)\/(assets)\/.*.(?:png|gif|jpg|jpeg|svg)$/,
