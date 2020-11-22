@@ -154,6 +154,13 @@ workbox.routing.registerRoute(
   })
 );
 
+workbox.routing.registerRoute(
+  new RegExp('https://fonts.googleapis.com/icon?family=Material+Icons'),
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: 'Icons'
+  })
+);
+
 // event push
 self.addEventListener('push', function (event) {
   var body;
