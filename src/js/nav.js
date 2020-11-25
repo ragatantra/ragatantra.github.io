@@ -45,14 +45,19 @@ document.addEventListener("DOMContentLoaded", () => {
     xhttp.onreadystatechange = function () {
       if (this.readyState === 4) {
         let content = document.querySelector("#body-content");
-        if (page === "home") {
-          getMatches();
-        } else if (page === "standings") {
-          getStandings();
-        } else if (page === "team") {
-          getTeams();
-        } else if (page === "saved") {
-          getSavedTeams();
+        switch (page) {
+          case "home": {
+            getMatches();
+          }
+          case "standings": {
+            getStandings();
+          }
+          case "team": {
+            getTeams();
+          }
+          case "saved": {
+            getSavedTeams();
+          }
         }
         if (this.status === 200) {
           content.innerHTML = xhttp.responseText;
