@@ -24,8 +24,8 @@ function saveForLater(dbteam) {
 function deleteCLub(savedTeam) {
     dbPromised
         .then(function (db) {
-            var tx = db.transaction('teams', 'readwrite');
-            var store = tx.objectStore('teams');
+            let tx = db.transaction('teams', 'readwrite');
+            let store = tx.objectStore('teams');
             store.delete(parseInt(savedTeam));
             return tx.complete;
         }).then(function () {
